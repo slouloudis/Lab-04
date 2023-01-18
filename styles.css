@@ -10,10 +10,16 @@ html, body, div, form, fieldset, legend, label, h1, h2, h3, h4
 
 a{ color: inherit; text-decoration: inherit;}
 
-/*UtilClasses*/
+body{background-color: black;}
+
+/*----------------UtilClasses----------------*/
+
+.flex{
+    display: flex;
+}
 
 
-/*txt*/
+/*----------------txt----------------*/
 
 .txt--500--links{
     font-family: 'Mulish', sans-serif;
@@ -24,11 +30,12 @@ a{ color: inherit; text-decoration: inherit;}
     list-style: none;
 }
 
-.flex{
-    display: flex;
+.txt--400{
+    font-family: 'Mulish', sans-serif;
+    color: white;
 }
 
-/* Nav & Header */
+/* ----------------Nav & Header---------------- */
 
 .menuLinks {
     list-style: none;
@@ -62,7 +69,7 @@ header{
     height: 130px;
 }
 
-/* OUR SPLASH CSS */
+/* ----------------SPLASH CSS---------------- */
 
 .landingPage{
     background-image: url(imgs/plant2.jpg) ;
@@ -84,6 +91,7 @@ header{
     font-family: 'Mulish', sans-serif;
     color: white;
     font-size: 20px;
+    font-weight: lighter;
 }
 
 .splash--inner h2{
@@ -99,14 +107,11 @@ header{
 .button-1{
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: .25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
   cursor: pointer;
   display: inline-flex;
   font-family: 'Mulish', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
   justify-content: center;
   line-height: 1.25;
   margin: 0;
@@ -114,3 +119,30 @@ header{
   vertical-align: baseline;
   width: auto;
 }
+
+/* ----------------SECTIONS A AND B---------------- */
+
+.Section--A{
+    justify-content: space-between;
+}
+
+.Section--B{
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------- FOOTER ---------------- */
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
