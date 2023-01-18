@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;600&display=swap');
 
 /* CSS Mini Reset */
 
@@ -11,6 +11,7 @@ html, body, div, form, fieldset, legend, label, h1, h2, h3, h4
 a{ color: inherit; text-decoration: inherit;}
 
 /*UtilClasses*/
+
 
 /*txt*/
 
@@ -45,7 +46,7 @@ li{
 
 header{
     width: 100%;
-    background-color:rgb(68, 68, 68);
+    background-color:rgba(37, 37, 37, 0.048);
     display: flex;
     justify-content: space-between; 
 }
@@ -54,6 +55,62 @@ header{
     padding-right: 50px;
 }
 
-.splashScreen{
-    background-image: url(imgs/) ;
+.logo{
+    padding-left:50px;
+    padding-top: 10px;
+    width: 120px;
+    height: 130px;
+}
+
+/* OUR SPLASH CSS */
+
+.landingPage{
+    background-image: url(imgs/plant2.jpg) ;
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.splash--inner{
+    position: absolute;
+    bottom:100px;
+    left: 150px;
+}
+
+.splash--inner h1{
+    font-family: 'Mulish', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.splash--inner h2{
+    font-family: 'Mulish', sans-serif;
+    color:#D7503E;
+    font-size: 50px;
+    font-weight: 600px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Button CSS */
+.button-1{
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: 'Mulish', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  position: relative;
+  vertical-align: baseline;
+  width: auto;
 }
