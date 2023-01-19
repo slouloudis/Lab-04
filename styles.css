@@ -33,11 +33,24 @@ body{background-color: black;}
 .txt--400{
     font-family: 'Mulish', sans-serif;
     color: white;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 50px;
 }
 
+.txt--300{
+    font-family: 'Mulish', sans-serif;
+    color: white;
+
+}
+/* Js Style */
+
+.jsMessage{
+
+}
 /* ----------------Nav & Header---------------- */
 
-.menuLinks {
+.menuLinks{
     list-style: none;
     margin: 22px 20px;
 }
@@ -83,7 +96,7 @@ header{
 
 .splash--inner{
     position: absolute;
-    bottom:100px;
+    bottom:80px;
     left: 150px;
 }
 
@@ -94,7 +107,7 @@ header{
     font-weight: lighter;
 }
 
-.splash--inner h2{
+.splash--inner > h2{
     font-family: 'Mulish', sans-serif;
     color:#D7503E;
     font-size: 50px;
@@ -123,7 +136,11 @@ header{
 /* ----------------SECTIONS A AND B---------------- */
 
 .Section--A{
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 400px;
 }
 
 .Section--B{
