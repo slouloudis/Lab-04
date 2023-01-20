@@ -4,7 +4,7 @@
 let myName;
 
 function getName(){
-    myName = prompt("What is your name","please?");
+    myName = prompt("What is your name","Sam");
 }
 
 // function to get the users time and say hello
@@ -27,12 +27,45 @@ function getTime(){
     document.write(message)
 }
 
+// Function to make a user guess a number
+
+function guessNumber(){
+    let answer;
+    
+    while(answer != 3){
+        answer = prompt("Guess a number between 0 and 10","3");
+        if (answer != 3){
+            alert("No! Wrong! Try again, idiot");
+        } else {
+            document.write("Wow! How did you know? Stop reading the source code! >:(");
+        }
+    }
+}
 
 
+// function to let the user rate a website
 
+function getRating(){
+    
+    let rating = prompt("Do you like my website. Say yes or else. Except its on a scale of 1-5, not yes or no.","5");
+    let output = "";
 
+    for(let i = 0; i < rating; i++){
+        // if ((rating => 0) && (rating <= 5)){
+        if (rating > 0 && rating < 6){
+            output = output + "<marquee><img src='imgs/star.png' class='star' /></marquee>"
+        } else {
+            alert("Don't try to be clever");
+            console.log("clever")
+            getRating();
+        }
 
+    }
 
+    document.write(output);
+}
+
+// <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Freepik - Flaticon</a>
 
 
 
