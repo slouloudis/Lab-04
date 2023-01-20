@@ -45,85 +45,86 @@ function guessNumber(){
 
 // function to let the user rate a website
 
-function getRating(){
+function getRating() {
     
     let rating = prompt("Do you like my website. Say yes or else. Except its on a scale of 1-5, not yes or no.","5");
     let output = "";
 
-    for(let i = 0; i < rating; i++){
-        // if ((rating => 0) && (rating <= 5)){
-        if (rating > 0 && rating < 6){
-            output = output + "<marquee><img src='imgs/star.png' class='star' /></marquee>"
-        } else {
-            alert("Don't try to be clever");
-            console.log("clever")
-            getRating();
-        }
+    while (!(rating > 0 && rating <= 5)) {
+        alert("Don't be clever");
+        rating = prompt("Do you like my website. Say yes or else. Except its on a scale of 1-5, not yes or no.","5");
+    }
+        
+    output = output + "<marquee><img src='imgs/star.png' class='star' /></marquee>"
+    document.write(output.repeat(rating));
+}
 
+
+
+function getRating() {
+
+    let rating = prompt("Do you like my website. Say yes or else. Except its on a scale of 1-5, not yes or no.","5");
+    let output = "";
+
+    // validate rating is correct by checking that the rating is NOT between 1 and 5. If the rating is 'correct' it wont run at all. 
+    while (!(rating > 0 && rating <= 5)) {
+        alert("Don't be clever");
+        rating = prompt("Do you like my website. Say yes or else. Except its on a scale of 1-5, not yes or no.","5");
     }
 
-    document.write(output);
+    // now, we have a valid rating and we want to build up our output string 
+    for (let i = 0; i < rating; i++) {
+        output = output + "<marquee><img src='imgs/star.png' class='star' /></marquee>"
+    }
+
+    // print itself
+    document.write(output)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+Ok, the getRating function was super tough for me to get right, but I got there eventually. I started with pretty much a copy of Tims code from the morning lecture, then tried to add 
+to the conditional to check if the number was between 5 and 0. 
+Some interesting things I learned doing this. 
+    - You can't multiply a string and a number like you can in python. I used the .repeat function and passed it the rating variable to get my stars to show again. For a while, I had
+    a nicely styled NaN error there instead. 
+    - 
+
+*/
+
+
+
+// --------------------------------------------------------- how to make a while loop with a for loop
+
+// for (;!(ratomg > 0 && rating <= 5);) {
+    // so on
+
+// -------------------------------------------------------
+
+// use for loops for n number times, or iterating over list. 
+// while for everything else 
+
+
 
 // <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Freepik - Flaticon</a>
 
 
 
-
-
-
-
-
-
-
-
-
-
-// let myName = "Sam";
-
-// console.log(myName);
-
-// variable names have to one word. 
-
-// let yourCookies = prompt("Accept cookies? They're fresh out the oven","");
-
-// let yourName = prompt("What is your name?", "Please enter a name");
-
-// console.log(yourName);
-
-// this is about if statements. 
-
-// if(10  8){
-//     console.log("That true!");
-// }else{
-//     console.log("Actually, thats not true!");
-// }
-
-
-// function getName(){
-//     let myName = prompt("What is your name","please?");
-//     return myName
-// }
-
-// let theTime = prompt("What time is it? In 24 hrs pls","10");
-
-// let message;
-
-// if (theTime <= 11){
-//     // console.log("Good morning "+ myName + "!");
-//     message = "Good morning, "+ myName + "!"
-// }else if(theTime <= 18){
-//     message = "it isn't morning! boo! It's afternoon, " + myName
-// }else if(theTime < 24){
-//     message = "Good evening " + myName + "! It's nearly morning!"
-// }else{
-//     message = myName + ", that isn't a valid time! >:("
-// }
-
+// variable names have to one word.
 // This code above is very wet - we're repeating ourselves. Let's assign a message to it
-
-// document.write(message);
-
 // could use multiple files for multiple calls if you want to write multiple times. 
 // trying to use a selector :(
 
@@ -138,7 +139,4 @@ function letsShop()
     }
 return 
 */
-
-// A function is a block of reusable code that we can call multiple times. 
-
 // Ctrl + H to replace. Ctrl + D to highlight repeats
